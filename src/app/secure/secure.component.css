@@ -1,0 +1,17 @@
+.style-user-secure {
+  width: fit-content;
+  box-shadow: 2px 4px 12px #ababab;
+  border-radius: 8px;
+}
+
+.style-title-secure {
+  width: fit-content;
+  box-shadow: 2px 4px 12px #ababab;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.style-table-secure {
+  box-shadow: 2px 4px 12px #ababab;
+  border-radius: 8px;
+}

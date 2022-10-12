@@ -1,0 +1,11 @@
+.style-home-title {
+  padding: 2px;
+  box-shadow: 2px 4px 12px #ababab;
+
+  border-radius: 8px;
+}
+
+.style-home-card {
+  box-shadow: 2px 4px 12px #ababab;
+  border-radius: 8px;
+}

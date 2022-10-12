@@ -1,0 +1,114 @@
+<div class="style-user-secure">
+  <h5 *ngIf="user" class="p-2">
+    Hi
+    <strong
+      >{{ user.first_name | uppercase }}
+      {{ user.last_name | uppercase }}</strong
+    >
+  </h5>
+</div>
+
+<div class="style-title-secure">
+  <h1 class="text-center mt-5 mb-5 p-3">Full-stack Test</h1>
+</div>
+
+<div class="style-table-secure p-3 mb-3">
+  <br />
+  <div style="text-align: center">
+    <button type="button" class="btn btn-primary" (click)="openModal(template)">
+      Add Product
+    </button>
+  </div>
+  <br />
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price ($)</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th class="p-3" scope="row">{{ product.id }}</th>
+        <td class="p-3">{{ product.name }}</td>
+        <td class="p-3">{{ product.description }}</td>
+        <td class="p-3">{{ product.price }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-info me-2"
+            (click)="openModal(template, product)"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="delete(product)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{ modalTitle }}</h4>
+    <button
+      type="button"
+      class="btn-close close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group p-2">
+      <label for="exampleInputEmail1">Product Name</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Product Name"
+        [formControl]="name"
+      />
+      <small *ngIf="name.errors?.['required'] && showError"
+        ><b style="color: red"> *Name is required.</b></small
+      >
+    </div>
+    <div class="form-group p-2">
+      <label for="exampleInputEmail1">Product Description</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Product Description"
+        [formControl]="description"
+      />
+      <small *ngIf="description.errors?.['required'] && showError"
+        ><b style="color: red"> *Description is required.</b></small
+      >
+    </div>
+    <div class="form-group p-2">
+      <label for="exampleInputEmail1">Product Price</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Enter Product Price"
+        [formControl]="price"
+      />
+      <small *ngIf="price.errors?.['required'] && showError"
+        ><b style="color: red"> *Price is required.</b></small
+      >
+    </div>
+    <button type="button" class="btn btn-primary m-2" (click)="save()">
+      {{ btnTitle }}
+    </button>
+  </div>
+</ng-template>
