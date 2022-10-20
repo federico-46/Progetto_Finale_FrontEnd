@@ -11,11 +11,22 @@
             class="nav-link active"
             aria-current="page"
             href=""
+            [routerLink]="['/']"
+          >
+            Home</a
+          >
+        </li>
+        <li *ngIf="!loggedIn" class="nav-item header_icon me-3">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href=""
             [routerLink]="['ecommerce']"
           >
             Shop</a
           >
         </li>
+
         <li *ngIf="!loggedIn" class="nav-item header_icon me-3">
           <a
             class="nav-link active"
