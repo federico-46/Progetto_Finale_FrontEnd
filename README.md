@@ -1,6 +1,6 @@
 # AppFullStack - FrontEnd
 
-![Alt text](image.png "image")
+![Alt text](img.png "image")
 
 This project is basically a kind of prototype of a simple ecommerce with also backoffice.
 
