@@ -1,0 +1,8 @@
+.cart-section {
+  min-height: 70vh;
+}
+
+.style-cart-card {
+  box-shadow: 2px 4px 12px #ababab;
+  border-radius: 8px;
+}

@@ -1,5 +1,5 @@
-<div class="style-user-secure">
-  <h5 *ngIf="user" class="p-2">
+<div class="style-user-secure ms-3">
+  <h5 *ngIf="user" class="p-2 mt-3">
     Hi
     <strong
       >{{ user.first_name | uppercase }}
@@ -9,13 +9,13 @@
 </div>
 
 <div class="style-title-secure">
-  <h1 class="text-center mt-5 mb-5 p-3">Full-stack Test</h1>
+  <h1 class="text-center mt-5 mb-5 p-3">Product Management</h1>
 </div>
 
-<div class="style-table-secure p-3 mb-3">
+<div class="style-table-secure p-4 m-3">
   <br />
   <div style="text-align: center">
-    <button type="button" class="btn btn-primary" (click)="openModal(template)">
+    <button type="button" class="btn btn-dark" (click)="openModal(template)">
       Add Product
     </button>
   </div>
@@ -43,14 +43,14 @@
             class="btn btn-info me-2"
             (click)="openModal(template, product)"
           >
-            Edit
+            <i class="fas fa-edit"></i>
           </button>
           <button
             type="button"
             class="btn btn-danger"
             (click)="delete(product)"
           >
-            Delete
+            <i class="far fa-trash-alt"></i>
           </button>
         </td>
       </tr>
@@ -107,7 +107,7 @@
         ><b style="color: red"> *Price is required.</b></small
       >
     </div>
-    <button type="button" class="btn btn-primary m-2" (click)="save()">
+    <button type="button" class="btn btn-dark m-2" (click)="save()">
       {{ btnTitle }}
     </button>
   </div>

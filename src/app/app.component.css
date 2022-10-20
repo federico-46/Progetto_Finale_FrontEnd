@@ -1,0 +1,27 @@
+.navbar_custom {
+  height: 60px;
+  background-image: linear-gradient(
+    -225deg,
+    #77807f 30%,
+    #84878f 60%,
+    #313032 100%
+  );
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 12px 0px;
+}
+
+.header_icon {
+  opacity: 0.6 !important;
+}
+
+.header_icon:hover {
+  opacity: 1 !important;
+}
+
+.logo {
+  height: 170px;
+}
+
+.header_custom {
+  display: flex;
+  justify-content: center;
+}

@@ -1,20 +1,44 @@
-<nav class="navbar navbar-dark bg-dark mb-4">
-  <ul class="navbar-nav ms-5">
-    <li *ngIf="!loggedIn" class="nav-item active">
-      <a class="nav-link" [routerLink]="['/']">Home</a>
-    </li>
-  </ul>
-  <div class="navbar-nav me-5">
-    <a class="nav-link" [routerLink]="['/login']" *ngIf="!loggedIn">Login</a>
-    <a
-      class="nav-link"
-      [routerLink]="['/login']"
-      *ngIf="loggedIn"
-      (click)="logout()"
-      >Logout</a
-    >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar_custom">
+  <div class="container-fluid header_custom">
+    <a *ngIf="!loggedIn" class="navbar-brand ms-3" href="" routerLink="/"
+      ><img class="logo" src="../assets/logo.svg" alt=""
+    /></a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li *ngIf="!loggedIn" class="nav-item header_icon me-3">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href=""
+            [routerLink]="['ecommerce']"
+          >
+            Shop</a
+          >
+        </li>
+        <li *ngIf="!loggedIn" class="nav-item header_icon me-3">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href=""
+            [routerLink]="['cart']"
+          >
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+
+        <li class="nav-item header_icon me-3">
+          <a
+            class="nav-link active"
+            [routerLink]="['/']"
+            *ngIf="loggedIn"
+            (click)="logout()"
+            >Logout</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+
+<router-outlet></router-outlet>

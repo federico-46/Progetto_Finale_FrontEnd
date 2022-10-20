@@ -10,6 +10,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { PublicModule } from './public/public.module';
 import { SecureComponent } from './secure/secure.component';
+import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 
 @NgModule({
   declarations: [AppComponent, SecureComponent],
@@ -22,6 +23,7 @@ import { SecureComponent } from './secure/secure.component';
     TooltipModule.forRoot(),
     AppRoutingModule,
     PublicModule,
+    NgxBootstrapIconsModule.pick(allIcons),
   ],
   providers: [],
   bootstrap: [AppComponent],

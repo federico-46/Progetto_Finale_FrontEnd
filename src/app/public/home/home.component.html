@@ -1,24 +1,28 @@
-<div class="container text-center mt-5">
+<div class="container text-center my-5">
   <div class="style-home-title">
     <h1>WELCOME</h1>
     <h5 class="mt-3">
       This is a project that simulates a restricted area of ​​an inventory /
-      warehouse.
+      warehouse and a shop that makes items available.
     </h5>
   </div>
 
   <div class="row justify-content-evenly">
-    <div class="col-3 mt-5 p-3 style-home-card">
-      <p class="lead">If you are a registered user, please login to access.</p>
-      <a class="btn btn-lg btn-primary" [routerLink]="['/login']">Login</a>
+    <div class="col-3 mt-5 p-3 card style-home-card">
+      <div class="card-body">
+        <h5 class="card-title">Reserved Area</h5>
+        <p class="card-text">
+          If you are an authorized user, log in here for product management.
+        </p>
+        <a class="btn btn-dark" [routerLink]="['/login']">Login</a>
+      </div>
     </div>
-    <div class="col-3 mt-5 p-3 style-home-card">
-      <p class="lead">
-        If you are not a registered user, please register and then log in.
-      </p>
-      <a class="btn btn-lg btn-primary" [routerLink]="['/register']"
-        >Register</a
-      >
+    <div class="col-3 mt-5 p-3 card style-home-card">
+      <div class="card-body">
+        <h5 class="card-title">E-commerce</h5>
+        <p class="card-text">If you are a customer looking for our products</p>
+        <a class="btn btn-dark" [routerLink]="['/ecommerce']">Shop</a>
+      </div>
     </div>
   </div>
 </div>
